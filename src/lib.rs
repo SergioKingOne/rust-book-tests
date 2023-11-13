@@ -46,6 +46,11 @@ mod tests {
     use super::*;
 
     #[test]
+    #[ignore = "too expensive"]
+    fn expensive_test() {
+        // code that takes an hour to run
+    }
+    #[test]
     fn it_works() -> Result<(), String> {
         if 2 + 2 == 4 {
             Ok(())
@@ -74,7 +79,7 @@ mod tests {
     }
 
     #[test]
-    fn it_addds_two() {
+    fn it_adds_two() {
         assert_eq!(4, add_two(2));
     }
 
